@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="property"
+            type="com.task.noteapp.db.model.Note" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_detail_card_height"
+            android:layout_marginEnd="@dimen/general_space_xs"
+            android:layout_marginStart="@dimen/general_space_xs"
+            android:layout_marginTop="@dimen/general_space"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/general_space"
+                >
+                <TextView
+                    android:id="@+id/isEditedTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/badge_margin"
+                    android:layout_marginRight="@dimen/badge_margin"
+                    android:text="@string/edited"
+                    android:textColor="@color/purple_200"
+
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:id="@+id/notePhoto"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="@dimen/general_space"
+                    app:imageUrl="@{property.imageUrl}"
+                    tools:src="@tools:sample/backgrounds/scenic"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/noteTitle"
+                    android:layout_toRightOf="@+id/notePhoto"
+                    android:layout_toLeftOf="@id/isEditedTag"
+                    android:layout_alignParentTop="true"
+                    android:textSize="@dimen/note_detail_title_size"
+                    android:maxLines="1"
+                    android:text="@{property.title}"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/noteDate"
+                    android:layout_toRightOf="@+id/notePhoto"
+                    android:layout_below="@+id/noteTitle"
+                    android:text="@{property.createdDate}"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/noteContent"
+                    android:layout_toRightOf="@+id/notePhoto"
+                    android:layout_below="@+id/noteDate"
+                    android:maxLines="2"
+                    android:text="@{property.noteContent}"
+                    />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

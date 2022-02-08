@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.task.noteapp.scenes.note_edit.NoteEditVM" />
+        <import type="com.task.noteapp.shared.view.input_view.InputFormat" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.task.noteapp.shared.view.input_view.InputView
+            android:id="@+id/titleInputView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/general_space_xl"
+            android:inputFormat="@{InputFormat.None}"
+            android:title="@{@string/note_title}"
+            android:errorMessage="@{@string/title_error}"
+            android:layout_marginHorizontal="@dimen/general_space_xl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <com.task.noteapp.shared.view.input_view.InputView
+            android:id="@+id/messageInputView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/general_space_xl"
+            android:inputFormat="@{InputFormat.None}"
+            android:title="@{@string/note_content}"
+            android:errorMessage="@{@string/content_error}"
+            android:layout_marginHorizontal="@dimen/general_space_xl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleInputView"
+            />
+
+        <com.task.noteapp.shared.view.input_view.InputView
+            android:id="@+id/imageUrlInputView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/general_space_xl"
+            android:inputFormat="@{InputFormat.Url}"
+            android:title="@{@string/image_url_title}"
+            android:errorMessage="@{@string/valid_image_url_error}"
+            android:layout_marginHorizontal="@dimen/general_space_xl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/messageInputView"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/saveNoteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/save"
+            android:layout_margin="@dimen/general_space" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

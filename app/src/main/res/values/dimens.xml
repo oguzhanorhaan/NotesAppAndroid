@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="note_image_height">200dp</dimen>
+    <dimen name="note_image_margin_top">16dp</dimen>
+    <dimen name="detail_scroll_margin_top">16dp</dimen>
+    <dimen name="general_space">16dp</dimen>
+    <dimen name="date_text_size">16sp</dimen>
+    <dimen name="title_text_size">16sp</dimen>
+    <dimen name="content_text_size">16sp</dimen>
+    <dimen name="general_space_xs">8dp</dimen>
+    <dimen name="general_space_xl">24dp</dimen>
+    <dimen name="recycler_padding">12dp</dimen>
+    <dimen name="error_text_size">12sp</dimen>
+    <dimen name="error_margin_top">4dp</dimen>
+    <dimen name="image_detail_card_height">200dp</dimen>
+    <dimen name="badge_margin">4dp</dimen>
+    <dimen name="image_size">100dp</dimen>
+    <dimen name="note_detail_title_size">30sp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+    <string name="note_title">Note Title</string>
+    <string name="title_error">Enter a valid title</string>
+    <string name="image_url_title">Enter an image Url</string>
+    <string name="valid_image_url_error">Enter a valid image Url</string>
+    <string name="note_content">Note Content</string>
+    <string name="content_error">Enter a valid note.</string>
+    <string name="fill_blanks">Please fill the blank fields</string>
+    <string name="validation_error">Please enter valid value</string>
+    <string name="date_month_year_format">dd-MM-yyyy</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="edited">Edited</string>
+</resources>
